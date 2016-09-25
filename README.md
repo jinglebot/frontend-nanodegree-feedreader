@@ -14,7 +14,7 @@ Or:
 1. Download or fork the application from: [https://github.com/jinglebot/frontend-nanodegree-feedreader/tree/master]
 2. Click the *Settings* button to get to Settings Page.
 3. Under *Github Pages*, click the _Your site is published at [https://jinglebot.github.io/frontend-nanodegree-feedreader/]_ .
-4. You will get a _404 error message_. And so, edit the address to include the dist folder: [https://jinglebot.github.io/frontend-nanodegree-feedreader/*dist*]_.
+4. You will get a _404 error message_. And so, edit the address to include the dist folder: _[https://jinglebot.github.io/frontend-nanodegree-feedreader/_ _**dist**_ _]_ (https://jinglebot.github.io/frontend-nanodegree-feedreader/dist).
 5. Use **hamburger menu icon** to see the feed list.
 6. Select a list item to open a new feed.
 
