@@ -79,7 +79,7 @@ $(function() {
             loadFeed(0, done);
         });
 
-        it('should have at least one entry', function (done) {
+        it('should have at least one entry', function() {
             expect($('.feed').children()).toBeDefined();
             expect($('.feed .entry').length).not.toBe(0);
         });
