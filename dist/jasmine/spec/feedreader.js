@@ -101,7 +101,7 @@ $(function() {
         });
 
         it('should change content when a new feed is loaded', function (done) {
-            loadFeed(0, function() {
+            loadFeed(1, function() {
                 newFeed = $('.feed .entry').children().html();
                 // console.log(newFeed);
                 expect(newFeed).not.toMatch(oldFeed);
