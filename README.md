@@ -35,9 +35,11 @@ I used a _forEach_ loop for the two instructions and wrote and the respective `e
 ```
 expect(feed.url).toBeDefined();
 expect(feed.url).not.toBe(null);
+correction: expect(feed.url.length).not.toBe(0);
 
 expect(feed.name).toBeDefined();
 expect(feed.name).not.toBe(null);
+correction: expect(feed.name.length).not.toBe(0);
 ```
 
 > Write a new test suite named `"The menu"`.
@@ -61,6 +63,11 @@ beforeEach(function(done) {
     loadFeed(0, function() {
         done();
     });
+});
+
+correction: 
+beforeEach(function(done) {
+    loadFeed(0, done);
 });
 ```
 And then, I wrote the `expect` statements to check that the _feed_ class would have at least one child _entry_ class and not equal to zero.
@@ -91,5 +98,16 @@ it('should change content when a new feed is loaded', function (done) {
     });
 
     expect(newFeed).not.toMatch(oldFeed);
+});
+
+correction: 
+it('should change content when a new feed is loaded', function (done) {
+    loadFeed(1, function() {
+        newFeed = $('.feed .entry').children().html();
+        // console.log(newFeed);
+        expect(newFeed).not.toMatch(oldFeed);
+        done();
+    });
+
 });
 ```
