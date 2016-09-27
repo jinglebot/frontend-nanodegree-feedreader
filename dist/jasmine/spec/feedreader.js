@@ -104,10 +104,9 @@ $(function() {
             loadFeed(1, function() {
                 newFeed = $('.feed .entry').children().html();
                 // console.log(newFeed);
+                expect(newFeed).not.toMatch(oldFeed);
                 done();
             });
-
-            expect(newFeed).not.toMatch(oldFeed);
         });
     });
 
